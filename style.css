@@ -6,105 +6,6 @@
 }
 
 body {
-<section class="alur-tugas">
-
-  <h2>1. Algoritma</h2>
-
-  <ol>
-    <li>Mulai.</li>
-    <li>Buka halaman Data Siswa.</li>
-    <li>Isi data siswa.</li>
-    <li>Klik tombol Tambah/Simpan.</li>
-    <li>Sistem memeriksa kelengkapan data.</li>
-    <li>Jika data lengkap, data ditambahkan ke tabel.</li>
-    <li>Jika data tidak lengkap, tampilkan pesan error.</li>
-    <li>Tampilkan data siswa.</li>
-    <li>Selesai.</li>
-  </ol>
-
-
-  <h2>2. Pseudocode</h2>
-
-  <pre>
-BEGIN
-
-Tampilkan halaman Data Siswa
-
-INPUT nama
-INPUT NIS
-INPUT kelas
-INPUT jurusan
-
-IF data lengkap THEN
-    Tambahkan data ke tabel
-    Tampilkan "Data berhasil ditambahkan"
-ELSE
-    Tampilkan "Data harus diisi lengkap"
-END IF
-
-Tampilkan data siswa
-
-END
-  </pre>
-
-
-  <h2>3. Flowchart</h2>
-
-  <div class="flowchart">
-
-    <div class="flow-box start">MULAI</div>
-    <div class="arrow">↓</div>
-
-    <div class="flow-box">
-      Buka Web Data<br>Siswa
-    </div>
-    <div class="arrow">↓</div>
-
-    <div class="flow-box">
-      Isi Data Siswa
-    </div>
-    <div class="arrow">↓</div>
-
-    <div class="flow-box">
-      Klik Tambah /<br>Simpan
-    </div>
-    <div class="arrow">↓</div>
-
-    <div class="decision">
-      <span>Data lengkap?</span>
-    </div>
-
-    <div class="branches">
-
-      <div class="branch">
-        <b>YA</b>
-        <div class="flow-box">
-          Data masuk<br>ke tabel
-        </div>
-      </div>
-
-      <div class="branch">
-        <b>TIDAK</b>
-        <div class="flow-box">
-          Tampilkan<br>pesan error
-        </div>
-      </div>
-
-    </div>
-
-    <div class="arrow">↓</div>
-
-    <div class="flow-box">
-      Tampilkan Data<br>Siswa
-    </div>
-
-    <div class="arrow">↓</div>
-
-    <div class="flow-box start">SELESAI</div>
-
-  </div>
-
-</section>
     background: #eaf4ff;
     min-height: 100vh;
     padding: 30px;
@@ -312,4 +213,85 @@ tr:nth-child(even) {
 
 .branch b {
   font-size: 16px;
+}
+<style>
+.alur-tugas {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.alur-tugas h2 {
+  text-align: center;
+  margin-top: 35px;
+  color: #245b91;
+}
+
+.alur-tugas pre {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+  border: 1px solid #b8d9f5;
+}
+
+.flowchart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flow-box {
+  width: 210px;
+  min-height: 60px;
+  padding: 12px;
+  background: white;
+  border: 3px solid #26384a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.flow-box.start {
+  border-radius: 30px;
+}
+
+.arrow {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.decision {
+  width: 130px;
+  height: 130px;
+  background: white;
+  border: 3px solid #26384a;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+}
+
+.decision span {
+  transform: rotate(-45deg);
+  font-weight: bold;
+}
+
+.branches {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
