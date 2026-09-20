@@ -79,14 +79,7 @@ END
 
 </section>
 
-  <h2>Flowchart</h2>
-  <p>
-    MULAI → Buka Web → Isi Data → Klik Simpan
-    → Cek Data → Data Lengkap?
-    → Ya: Tambahkan ke Tabel
-    → Tidak: Tampilkan Pesan Error → SELESAI
-  </p>
-</section>
+  
 <body>
 <section class="alur-tugas">
 
