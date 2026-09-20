@@ -37,6 +37,47 @@ BEGIN
   END IF
 END
   </pre>
+<section class="alur-tugas">
+
+  <h2>1. Algoritma</h2>
+
+  <ol>
+    <li>Mulai.</li>
+    <li>Buka halaman Data Siswa.</li>
+    <li>Isi data siswa.</li>
+    <li>Klik tombol Tambah/Simpan.</li>
+    <li>Sistem memeriksa kelengkapan data.</li>
+    <li>Jika data lengkap, data ditambahkan ke tabel.</li>
+    <li>Jika data tidak lengkap, tampilkan pesan error.</li>
+    <li>Tampilkan data siswa.</li>
+    <li>Selesai.</li>
+  </ol>
+
+  <h2>2. Pseudocode</h2>
+
+  <pre>
+BEGIN
+
+Tampilkan halaman Data Siswa
+
+INPUT nama
+INPUT NIS
+INPUT kelas
+INPUT jurusan
+
+IF data lengkap THEN
+    Tambahkan data ke tabel
+    Tampilkan "Data berhasil ditambahkan"
+ELSE
+    Tampilkan "Data harus diisi lengkap"
+END IF
+
+Tampilkan data siswa
+
+END
+  </pre>
+
+</section>
 
   <h2>Flowchart</h2>
   <p>
