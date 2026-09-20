@@ -47,6 +47,105 @@ END
   </p>
 </section>
 <body>
+<section class="alur-tugas">
+
+  <h2>1. Algoritma</h2>
+
+  <ol>
+    <li>Mulai.</li>
+    <li>Buka halaman Data Siswa.</li>
+    <li>Isi data siswa.</li>
+    <li>Klik tombol Tambah/Simpan.</li>
+    <li>Sistem memeriksa kelengkapan data.</li>
+    <li>Jika data lengkap, data ditambahkan ke tabel.</li>
+    <li>Jika data tidak lengkap, tampilkan pesan error.</li>
+    <li>Tampilkan data siswa.</li>
+    <li>Selesai.</li>
+  </ol>
+
+
+  <h2>2. Pseudocode</h2>
+
+  <pre>
+BEGIN
+
+Tampilkan halaman Data Siswa
+
+INPUT nama
+INPUT NIS
+INPUT kelas
+INPUT jurusan
+
+IF data lengkap THEN
+    Tambahkan data ke tabel
+    Tampilkan "Data berhasil ditambahkan"
+ELSE
+    Tampilkan "Data harus diisi lengkap"
+END IF
+
+Tampilkan data siswa
+
+END
+  </pre>
+
+
+  <h2>3. Flowchart</h2>
+
+  <div class="flowchart">
+
+    <div class="flow-box start">MULAI</div>
+    <div class="arrow">↓</div>
+
+    <div class="flow-box">
+      Buka Web Data<br>Siswa
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="flow-box">
+      Isi Data Siswa
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="flow-box">
+      Klik Tambah /<br>Simpan
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="decision">
+      <span>Data lengkap?</span>
+    </div>
+
+    <div class="branches">
+
+      <div class="branch">
+        <b>YA</b>
+        <div class="flow-box">
+          Data masuk<br>ke tabel
+        </div>
+      </div>
+
+      <div class="branch">
+        <b>TIDAK</b>
+        <div class="flow-box">
+          Tampilkan<br>pesan error
+        </div>
+      </div>
+
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="flow-box">
+      Tampilkan Data<br>Siswa
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="flow-box start">SELESAI</div>
+
+  </div>
+
+</section>
 
     <div class="container">
 <section class="flowchart-section">
