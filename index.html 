@@ -1,66 +1,254 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Siswa</title>
-  
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Data Siswa</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* =========================
+       BAGIAN ALUR TUGAS
+    ========================= */
+
+    .alur-tugas {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .alur-tugas h2 {
+      text-align: center;
+      color: #245b91;
+      margin-top: 35px;
+      margin-bottom: 20px;
+    }
+
+    .algoritma-box,
+    .pseudocode-box {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .algoritma-box li {
+      margin-bottom: 8px;
+    }
+
+    .pseudocode-box pre {
+      white-space: pre-wrap;
+      font-family: monospace;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* =========================
+       FLOWCHART
+    ========================= */
+
+    .flowchart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 25px;
+    }
+
+    .flow-box {
+      width: 220px;
+      min-height: 60px;
+      padding: 12px;
+      background: white;
+      border: 3px solid #26384a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+
+    .flow-box.start {
+      border-radius: 35px;
+    }
+
+    .arrow {
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1;
+      margin: 8px;
+    }
+
+    .decision {
+      width: 140px;
+      height: 140px;
+      background: white;
+      border: 3px solid #26384a;
+      transform: rotate(45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 30px;
+      box-sizing: border-box;
+    }
+
+    .decision span {
+      transform: rotate(-45deg);
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .branches {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      margin: 20px;
+    }
+
+    .branch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* =========================
+       DATA SISWA
+    ========================= */
+
+    .data-siswa {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .data-siswa h2 {
+      text-align: center;
+      color: #245b91;
+    }
+
+    .form-siswa {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .form-siswa label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+
+    .form-siswa input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+    }
+
+    .form-siswa button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 7px;
+      background: #397eb8;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin-top: 25px;
+    }
+
+    .table-container table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
+
+    .table-container th,
+    .table-container td {
+      border: 1px solid #aaa;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .table-container th {
+      background: #b8d9f5;
+    }
+
+    .hapus-btn {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Agar bagus di HP */
+    @media (max-width: 600px) {
+      .branches {
+        gap: 20px;
+      }
+
+      .flow-box {
+        width: 180px;
+      }
+
+      .decision {
+        width: 120px;
+        height: 120px;
+      }
+
+      .alur-tugas,
+      .data-siswa {
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
-<section class="materi">
-  <h2>Algoritma</h2>
-  <ol>
-    <li>Mulai.</li>
-    <li>Buka halaman Data Siswa.</li>
-    <li>Isi data siswa.</li>
-    <li>Klik tombol Tambah/Simpan.</li>
-    <li>Sistem memeriksa kelengkapan data.</li>
-    <li>Jika lengkap, data ditambahkan ke tabel.</li>
-    <li>Jika tidak lengkap, tampilkan pesan kesalahan.</li>
-    <li>Selesai.</li>
-  </ol>
 
-  <h2>Pseudocode</h2>
-  <pre>
-BEGIN
-  Tampilkan halaman Data Siswa
-  INPUT nama
-  INPUT NIS
-  INPUT kelas
-  INPUT jurusan
-
-  IF data lengkap THEN
-      Tambahkan data ke tabel
-      Tampilkan "Data berhasil ditambahkan"
-  ELSE
-      Tampilkan "Data harus diisi lengkap"
-  END IF
-END
-  </pre>
-
-  
 <body>
-<section class="alur-tugas">
 
-  <h2>1. Algoritma</h2>
+  <!-- ==================================
+       1. ALGORITMA
+  =================================== -->
 
-  <ol>
-    <li>Mulai.</li>
-    <li>Buka halaman Data Siswa.</li>
-    <li>Isi data siswa.</li>
-    <li>Klik tombol Tambah/Simpan.</li>
-    <li>Sistem memeriksa kelengkapan data.</li>
-    <li>Jika data lengkap, data ditambahkan ke tabel.</li>
-    <li>Jika data tidak lengkap, tampilkan pesan error.</li>
-    <li>Tampilkan data siswa.</li>
-    <li>Selesai.</li>
-  </ol>
+  <section class="alur-tugas">
+
+    <h2>1. Algoritma</h2>
+
+    <div class="algoritma-box">
+      <ol>
+        <li>Mulai.</li>
+        <li>Buka halaman Data Siswa.</li>
+        <li>Isi data siswa.</li>
+        <li>Klik tombol Tambah Data.</li>
+        <li>Sistem memeriksa kelengkapan data.</li>
+        <li>Jika data lengkap, data ditambahkan ke tabel.</li>
+        <li>Jika data tidak lengkap, tampilkan pesan error.</li>
+        <li>Tampilkan data siswa.</li>
+        <li>Selesai.</li>
+      </ol>
+    </div>
 
 
-  <h2>2. Pseudocode</h2>
+    <!-- ==================================
+         2. PSEUDOCODE
+    =================================== -->
 
-  <pre>
-BEGIN
+    <h2>2. Pseudocode</h2>
+
+    <div class="pseudocode-box">
+      <pre>BEGIN
 
 Tampilkan halaman Data Siswa
 
@@ -78,172 +266,232 @@ END IF
 
 Tampilkan data siswa
 
-END
-  </pre>
-
-
-  <h2>3. Flowchart</h2>
-
-  <div class="flowchart">
-
-    <div class="flow-box start">MULAI</div>
-    <div class="arrow">↓</div>
-
-    <div class="flow-box">
-      Buka Web Data<br>Siswa
-    </div>
-    <div class="arrow">↓</div>
-
-    <div class="flow-box">
-      Isi Data Siswa
-    </div>
-    <div class="arrow">↓</div>
-
-    <div class="flow-box">
-      Klik Tambah /<br>Simpan
-    </div>
-    <div class="arrow">↓</div>
-
-    <div class="decision">
-      <span>Data lengkap?</span>
+END</pre>
     </div>
 
-    <div class="branches">
 
-      <div class="branch">
-        <b>YA</b>
-        <div class="flow-box">
-          Data masuk<br>ke tabel
-        </div>
+    <!-- ==================================
+         3. FLOWCHART
+    =================================== -->
+
+    <h2>3. Flowchart</h2>
+
+    <div class="flowchart">
+
+      <div class="flow-box start">
+        MULAI
       </div>
 
-      <div class="branch">
-        <b>TIDAK</b>
-        <div class="flow-box">
-          Tampilkan<br>pesan error
+      <div class="arrow">↓</div>
+
+      <div class="flow-box">
+        Buka Web Data<br>
+        Siswa
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="flow-box">
+        Isi Data Siswa
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="flow-box">
+        Klik Tambah /<br>
+        Simpan
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="decision">
+        <span>Data<br>lengkap?</span>
+      </div>
+
+      <div class="branches">
+
+        <div class="branch">
+          <b>YA ↓</b>
+
+          <div class="flow-box">
+            Data masuk<br>
+            ke tabel
+          </div>
         </div>
+
+        <div class="branch">
+          <b>TIDAK ↓</b>
+
+          <div class="flow-box">
+            Tampilkan<br>
+            pesan error
+          </div>
+        </div>
+
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="flow-box">
+        Tampilkan Data<br>
+        Siswa
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="flow-box start">
+        SELESAI
       </div>
 
     </div>
 
-    <div class="arrow">↓</div>
+  </section>
 
-    <div class="flow-box">
-      Tampilkan Data<br>Siswa
-    </div>
 
-    <div class="arrow">↓</div>
+  <!-- ==================================
+       4. DATA SISWA
+  =================================== -->
 
-    <div class="flow-box start">SELESAI</div>
+  <section class="data-siswa">
 
-  </div>
+    <h2>4. Data Siswa</h2>
 
-</section>
+    <div class="form-siswa">
 
-    <div class="container">
-<section class="flowchart-section">
-  <h2>Flowchart Data Siswa</h2>
+      <label for="nama">Nama Siswa</label>
+      <input
+        type="text"
+        id="nama"
+        placeholder="Masukkan nama siswa"
+      >
 
-  <div class="flowchart">
+      <label for="nis">NIS</label>
+      <input
+        type="text"
+        id="nis"
+        placeholder="Masukkan NIS"
+      >
 
-    <div class="flow-box start">MULAI</div>
-    <div class="arrow">↓</div>
+      <label for="kelas">Kelas</label>
+      <input
+        type="text"
+        id="kelas"
+        placeholder="Masukkan kelas"
+      >
 
-    <div class="flow-box">
-      Buka Web Data<br>
-      Siswa
-    </div>
-    <div class="arrow">↓</div>
+      <label for="jurusan">Jurusan</label>
+      <input
+        type="text"
+        id="jurusan"
+        placeholder="Masukkan jurusan"
+      >
 
-    <div class="flow-box">
-      Isi Data Siswa
-    </div>
-    <div class="arrow">↓</div>
-
-    <div class="flow-box">
-      Klik Tambah /<br>
-      Simpan
-    </div>
-    <div class="arrow">↓</div>
-
-    <div class="decision">
-      <span>Data lengkap?</span>
-    </div>
-
-    <div class="branches">
-      <div class="branch">
-        <b>Ya ↓</b>
-        <div class="flow-box">
-          Data masuk<br>
-          ke tabel
-        </div>
-      </div>
-
-      <div class="branch">
-        <b>Tidak ↓</b>
-        <div class="flow-box">
-          Tampilkan<br>
-          pesan error
-        </div>
-      </div>
-    </div>
-
-    <div class="arrow">↓</div>
-
-    <div class="flow-box">
-      Tampilkan Data<br>
-      Siswa
-    </div>
-    <div class="arrow">↓</div>
-
-    <div class="flow-box start">SELESAI</div>
-
-  </div>
-</section>
-        <h1>📚 Data Siswa</h1>
-        <p class="subtitle">Aplikasi sederhana untuk mengelola data siswa</p>
-
-        <div class="form-box">
-
-            <label>Nama Siswa</label>
-            <input type="text" id="nama" placeholder="Nadya Julianti">
-
-            <label>NIS</label>
-            <input type="text" id="nis" placeholder="085776320558">
-
-            <label>Kelas</label>
-            <input type="text" id="kelas" placeholder="XI RPL 1">
-
-            <label>Jurusan</label>
-            <input type="text" id="jurusan" placeholder=" Rekayasa Perangkat Lunak">
-
-            <button onclick="tambahData()">Tambah Data</button>
-
-        </div>
-
-        <h2>Daftar Siswa</h2>
-
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Nama</th>
-                        <th>NIS</th>
-                        <th>Kelas</th>
-                        <th>Jurusan</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-
-                <tbody id="tabelSiswa">
-                </tbody>
-            </table>
-        </div>
+      <button onclick="tambahData()">
+        Tambah Data
+      </button>
 
     </div>
 
-    <script src="script.js"></script>
+
+    <!-- TABEL DATA -->
+
+    <div class="table-container">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>NIS</th>
+            <th>Kelas</th>
+            <th>Jurusan</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+
+        <tbody id="tabelSiswa">
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================================
+       JAVASCRIPT
+  =================================== -->
+
+  <script>
+
+    let nomor = 0;
+
+    function tambahData() {
+
+      const nama = document.getElementById("nama").value.trim();
+      const nis = document.getElementById("nis").value.trim();
+      const kelas = document.getElementById("kelas").value.trim();
+      const jurusan = document.getElementById("jurusan").value.trim();
+
+      /* Mengecek apakah data sudah lengkap */
+
+      if (
+        nama === "" ||
+        nis === "" ||
+        kelas === "" ||
+        jurusan === ""
+      ) {
+
+        alert("Data harus diisi lengkap!");
+
+        return;
+      }
+
+      nomor++;
+
+      const tabel = document.getElementById("tabelSiswa");
+
+      const baris = tabel.insertRow();
+
+      baris.innerHTML = `
+        <td>${nomor}</td>
+        <td>${nama}</td>
+        <td>${nis}</td>
+        <td>${kelas}</td>
+        <td>${jurusan}</td>
+        <td>
+          <button
+            class="hapus-btn"
+            onclick="hapusData(this)"
+          >
+            Hapus
+          </button>
+        </td>
+      `;
+
+      /* Mengosongkan form */
+
+      document.getElementById("nama").value = "";
+      document.getElementById("nis").value = "";
+      document.getElementById("kelas").value = "";
+      document.getElementById("jurusan").value = "";
+
+      alert("Data berhasil ditambahkan!");
+
+    }
+
+
+    function hapusData(button) {
+
+      const baris = button.parentElement.parentElement;
+
+      baris.remove();
+
+    }
+
+  </script>
 
 </body>
 </html>
